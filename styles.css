@@ -69,6 +69,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .project-tile {
@@ -83,12 +84,15 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
 }
 
 .project-tile img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .project-tile-container {
@@ -103,7 +107,15 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.project-tile a {
+    text-decoration: none;
+    color: whitesmoke;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+
 .project-tile a:hover {
+    color: darkmagenta;
     text-decoration: underline;
 }
 
@@ -113,6 +125,23 @@ body {
     text-align: center;
     font-family: 'Roboto Slab';
     color: whitesmoke;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    padding-right: 20px;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+    color:darkmagenta;
 }
 
 #footer {
