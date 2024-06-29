@@ -65,7 +65,7 @@ body {
     text-align: center;
     font-family: 'Roboto Slab';
     color: whitesmoke;
-    min-height: 100vh; /* Ensure minimum height */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
