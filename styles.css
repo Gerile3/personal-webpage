@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 header {
@@ -9,6 +10,8 @@ header {
     text-align: end;
     position: fixed;
     width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -56,18 +59,52 @@ body {
     font-size: 1.5rem;
 }
 
-
 #projects {
     background-color: #435585;
     padding: 20px;
     text-align: center;
     font-family: 'Roboto Slab';
     color: whitesmoke;
-    height: 100vh;
+    min-height: 100vh; /* Ensure minimum height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-tile {
+    background-color: #1f2833;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: whitesmoke;
+    transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+}
+
+.project-tile img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-tile-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
+
+.project-tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-tile a:hover {
+    text-decoration: underline;
 }
 
 #contact {
@@ -84,4 +121,19 @@ body {
     text-align: center;
     font-family: 'Roboto Slab';
     color: whitesmoke;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .project-tile-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-tile-container {
+        grid-template-columns: 1fr;
+    }
 }
